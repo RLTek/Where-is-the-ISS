@@ -8,14 +8,14 @@ const [astronauts, setAstronauts] = useState([])
 const [issPosition, setIssPosition] = useState({})
 
 useEffect(() => {
-  fetch('https://api.open-notify.org/astros.json')
+  fetch('http://api.open-notify.org/astros.json')
   .then(i => i.json())
   .then(i => setAstronauts(i))
   .catch(error => console.log(error))
 }, [])
 
 useEffect(() => {
-  fetch('https://api.open-notify.org/iss-now.json')
+  fetch('http://api.open-notify.org/iss-now.json')
   .then(j => j.json())
   .then(j => setIssPosition(j))
   .catch(error => console.log(error))
